@@ -1,0 +1,26 @@
+ {"list":[
+    {
+    "id":1,
+    "img":"https://resource.smartisan.com/resource/578116bddf1d170c89e9af7ba5073fb6.jpg",
+    "name":"Smartisan",
+     "title":"一双舒适又舒服的帆布鞋",
+     "price":"199"
+
+    },
+    {
+      "id":2,
+      "img":"https://resource.smartisan.com/resource/9bffe702b1f0aea221b1f18ddf886958.jpg",
+      "name":"各色DNA检测套装",
+      "title":"千万级基因位点数据解读",
+      "price":"499"
+    },
+    {
+        "id":3,
+        "img":"https://resource.smartisan.com/resource/6ff92d05a3bfab4fad489ca04d3eea5a.png",
+        "name":"畅呼吸智能空气净化器",
+        "title":"超轻净化能力",
+        "price":"2799"
+    }
+    
+]
+ }

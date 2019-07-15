@@ -1,0 +1,36 @@
+{
+  "arr":[
+      {
+        "id":1,
+        "url":"https://pic.maizuo.com/usr/movie/73b25044a8c9756fa41d3a723ee6c2c2.jpg",
+        "title":"千与千寻",
+         "pingfen":"观众评分",
+         "pingfens":7.1,
+         "desc":"主演：宫崎骏 柊瑠美  入野自由 夏木真理 中村彰男 ",
+         "didian":"日本 | 125分钟",
+         "but":"购票"
+         
+      },
+      {
+        "id":2,
+       "url":"https://pic.maizuo.com/usr/movie/294a01da8a6c9ed99bfbaaf52b2e0f25.jpg" ,
+       "title":"玩具总动员4"  ,
+       "pingfen":"观众评分",
+       "pingfens":7.1,
+       "desc":"主演：汤姆·汉克斯  蒂姆·艾伦 安妮·波茨   托尼·海尔",
+       "didian":"美国 | 100分钟",
+       "but":"购票"
+     
+      },{
+        "id":3,
+       "url":"https://pic.maizuo.com/usr/movie/bab81f484e7f5cc7a3e9cf69ffb22ff7.jpg" ,
+       "title":"爱宠大机密2" ,
+       "pingfen":"观众评分",
+       "pingfens":7.2,
+       "desc":"主演：克里斯·雷纳德 艾瑞克·斯通斯崔特 哈里森·福特 凯文·哈特 帕顿·奥斯瓦尔特",
+       "didian":"美国 | 103分钟" ,
+       "but":"购票"
+     
+      }
+  ]  
+}
