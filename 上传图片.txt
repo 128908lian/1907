@@ -1,0 +1,68 @@
+
+上传图片
+注意post请求必须带formData
+axios.defaults.headers.post['Content-Type'] = 'application/x-www-form-urlencoded';
+
+var instance = axios.create({
+  headers: {'content-type':'multipart/form-data'}
+});
+/**
+ * 封装post请求 FormData方式
+ * @param url
+ * @param data
+ * @returns {Promise}
+ */
+export function postform(url,data = {}){
+  return new Promise((resolve,reject) => {
+    instance.post(url,data)
+      .then(response => {
+        resolve(response.data);
+      },err => {
+        reject(err)
+      })
+  })
+}
+<Col span="8">
+  <Form-item label=""  >
+    <div>
+      <Upload
+        :before-upload="handleUpload"
+        action="/http://192.168.43.233:8082/upLoadExcel/"
+        :headers="{'Content-Type':'multipart/form-data'}"
+      >
+        <Button icon="ios-cloud-upload-outline">上传</Button>
+      </Upload>
+      <div v-if="file !== null" class="upfile"> <p>{{ file.name }}</p> <Button type="text" @click="upload" :loading="loadingStatus">{{ loadingStatus ? '上传中' : '点击上传' }}</Button></div>
+    </div>
+  </Form-item>
+</Col>
+handleUpload (file) {
+
+   this.file = file;
+   return false;
+ },
+ upload () {
+// alert(111111111);
+
+   let formData = new FormData();
+
+   formData.append('file', this.file);
+   formData.append('deptid', this.formImportItem.department);
+   formData.append('systemid', this.formImportItem.system);
+   formData.append('tabletype', this.formImportItem.tableType);
+   formData.append('state', this.formImportItem.ImportMe);
+   console.log(formData);
+   this.$postform("http://192.168.43.233:8082/upLoadExcel",
+     formData
+   ).then(res=>{
+     console.log(res);
+   }).catch(err=>{
+     console.log(err);
+   })
+   this.loadingStatus = true;
+   setTimeout(() => {
+     this.file = null;
+     this.loadingStatus = false;
+     this.$Message.success('Success')
+   }, 1500);
+ }
